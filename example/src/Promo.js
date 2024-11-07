@@ -1,7 +1,5 @@
 import React, {useState} from 'react'
 
-
-
 const Promo = (props) => {
 const [form, setForm] = useState({
     firstName: String,
@@ -33,7 +31,8 @@ function addItem(){
 }
 
   return (
-    <>    <div>
+    <>   
+     <div>
      <h1> {props.heading} </h1>
      <h2> {props.message} </h2>
     <label>First Name: <input value = {form.firstName} onChange={e=> {

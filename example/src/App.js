@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import Promo from './Promo';
+import Cart from './Cart';
 
 const data = {
   heading: "90% off on all items",
@@ -8,7 +9,10 @@ const data = {
 
 function App() {
   return (
+    <>
     <Promo heading = {data.heading} message = {data.message}/>
+    <Cart/>
+    </>
   )
 }
 
