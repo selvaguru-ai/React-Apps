@@ -3,11 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import API_read from './API_read';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <div class='row'>
+      <div class='col-6'>
+        <App />
+      </div>
+      <div class='col-6'>
+        <API_read />
+      </div>
+    </div>
   </React.StrictMode>
 );
 
