@@ -2,12 +2,12 @@ import React,{useState} from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 //https://cors-anywhere.herokuapp.com/corsdemo use this link and click temporary access to demo server
-const API_read = () => {
+const API_read = ({greeting}) => {
   
   const [searchNumber, setSearchNumber] = useState(0);
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
-
+    console.log({greeting});
   const handleSearch = async()=> {
     try{
         const response = await axios.get(
@@ -40,7 +40,7 @@ const API_read = () => {
       <div class='row'>
 
         <div class='col-4'>
-        <label class="form-label">Enter NPI Number</label>
+        <label class="form-label">Enter NPI Number : {greeting}</label>
         </div>
 
         <div class='col-4'>

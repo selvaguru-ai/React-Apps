@@ -1,12 +1,23 @@
 import logo from './logo.svg';
-import {useState, useEffect} from 'react';
+import {useState, useEffect, createContext} from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ChangeColor from './ChangeColor';
+import Child from './Child';
+
+export const userContext = createContext();
 
 function App() {
+  
+  const user = "Selva";
   const [element, arrElement] = useState([]);
   const [number, storeNumber] = useState(0);
   const [operator, setOperator] = useState('');
+  const [color, setColor] = useState('grey');
+
+  const changeColor = (color)=>{
+    setColor(color);
+  }
 
   const getNumber = (num) =>{
     storeNumber(num);
@@ -80,6 +91,25 @@ function App() {
     </div>
     <div class="col-4">
       <div id= "btn-3" class="calculator-box" onClick={()=>setOperator('C')}>C</div>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-6'>
+      {/* Block that changes the color */}
+      <div style={{
+        height: '200px',
+        width: '200px',
+        backgroundColor: color,
+        border: '1px solid black'
+      }} />
+      <div>
+        <ChangeColor getColorFromChild={changeColor} />
+      </div>
+    </div>
+    <div class='col-6'>
+      <userContext.Provider value= {user}>
+      <Child />
+      </userContext.Provider>
     </div>
   </div>
 </div>
