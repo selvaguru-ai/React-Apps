@@ -12,6 +12,25 @@
     padding: 0 1rem;
   }
   
-  .nav-item:hover {
+.nav-item:hover {
     color: darkgreen;
+  }
+
+  .form {
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 500px;
+    height: flex;
+    display: flex;
+    justify-content: left;
+  }
+
+  .fields {
+    padding-left: 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
   }
