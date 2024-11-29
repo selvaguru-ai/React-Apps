@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Budget = () => {
+const Budget = ({get_data}) => {
     const [selectedValue, setSelectedValue] = useState('');
     const [price, setPrice] = useState(0);
     const [expense, addExpenses] = useState([]);
@@ -20,6 +20,7 @@ const Budget = () => {
 
     useEffect(()=>{
         setTotal(expense.reduce((sum, item)=> sum + parseFloat(item.prices), 0))
+        get_data(expense);
     },[expense])
 
  return (

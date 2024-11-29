@@ -1,0 +1,32 @@
+{/*} useState(()=> {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://j5456kvum7.execute-api.us-east-1.amazonaws.com/Dev');
+        setData(response.data)
+      }
+      catch (error){
+        console.error('Error fetching the data', error)
+      }
+    }
+    fetchData();
+  }, [button]) */}
+
+   {/*    <div>
+          {data && data.length > 0 ? (
+            data.map((item, index) => (
+              <div key={index}>
+                <p>Agent ID: {item.agent_id}</p>
+                <p>Transaction Date: {item.trn_date}</p>
+                <p>Policy Type: {item.policy_type}</p>
+                <p>Policy Value: {item.policy_value}</p>
+                <p>Agent Experience: {item.agent_experience}</p>
+                <p>Number of Policies Sold: {item.number_of_policies_sold}</p>
+                <p>Customer Satisfaction Score: {item.customer_satisfaction_score}</p>
+                <p>Commission Amount: {item.commission_amt}</p>
+                <hr />
+              </div>
+            ))
+          ) : (
+            <p>No data available</p>
+          )}
+        </div>*/}
