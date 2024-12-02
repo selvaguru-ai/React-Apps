@@ -6,8 +6,9 @@ import {useState} from 'react';
 import './App.css';
 import ObjectsEx from './ObjectsEx';
 import Budget from './Budget';
-import Chart from './Chart';
 import Upload from './Upload';
+import ML_Component from './ML_Component';
+import MLCharts from './MLCharts';
 
 function App() {
   const [expense, sendExpense] = useState(0);
@@ -23,8 +24,9 @@ function App() {
           <Link to='/agentCommission' className="nav-item"> Agent Commissions </Link>
           <Link to='/ObjectsEx' className="nav-item">Objects Example</Link>
           <Link to='/Budget' className='nav-item'>Budget</Link>
-          <Link to='/Chart' className='nav-item'>Chart</Link>
           <Link to='/Upload' className='nav-item'>Upload</Link>
+          <Link to='/ml_component' className='nav-item'>ML Component</Link>
+          <Link to='/ml_charts' className='nav-item'>ML Charts</Link>
 
       </nav>
     <Routes>
@@ -32,8 +34,9 @@ function App() {
           <Route path = '/agentCommission' element = {<Agent_Commission/>}/>
           <Route path = '/ObjectsEx' element = {<ObjectsEx/>}/>
           <Route path = '/Budget' element={<Budget get_data={get_expenses}/>}/>
-          <Route path = '/Chart' element={<Chart chart_data={expense}/>}/>
           <Route path = '/Upload' element={<Upload />} />
+          <Route path = '/ml_component' element={<ML_Component/>} />
+          <Route path = '/ml_charts' element={<MLCharts/>}/>
     </Routes>
     </div>
   );

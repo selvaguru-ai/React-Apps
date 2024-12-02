@@ -87,10 +87,11 @@ export const UserProvider = ({children}) => {
             customer_satisfaction_score: 4.46,
             commission_amt: 1940.54,
           },
-    ])
-
+    ]);
+    const [PredictedCommissions, setpredictedCommissions] = useState([]);
+    const [ActualCommission, setactualCommission] = useState([]);
     return (
-        <APIContext.Provider value={{agentCommission, setAgentCommission}}>
+        <APIContext.Provider value={{agentCommission, setAgentCommission, PredictedCommissions, setpredictedCommissions, ActualCommission, setactualCommission}}>
             {children}
         </APIContext.Provider>
     )
